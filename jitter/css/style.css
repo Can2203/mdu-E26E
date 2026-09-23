@@ -2,8 +2,13 @@
 * fil: style.css
 **/
 
+/* farvepalette */
+:root {
+    --vand: rgb(194, 222, 242);
+}
+
 body {
-    background-color: rgb(194, 222, 242);
+    background-color: var(--vand);
 }
 
 p {
@@ -28,3 +33,4 @@ p {
     
 }
 */
+
