@@ -46,7 +46,11 @@ const animation = lottie.loadAnimation({
 
 ### Eksempel: Knapper
 
-Claude tror, at jeg er svensker, og prøver at svare med sit noget vingeskudte kendskab til skandinaviske sprog. 
+Herunder er nogen eksempler på styring af animationen ved hjælp af knapper. Knapperne behøver ikke at være kedelige grå firkanter. Læg grafik ind i stedet for, og læg en eventlistener på grafikken. 
+
+* Prøv også at lave en knap, der skriver information om fisken i en eller anden faktabox, her bruges typisk den semantiske `<aside>`-tag.
+
+----
 
 ~~~~
 <div id="jitter-container"></div>
@@ -66,17 +70,27 @@ Claude tror, at jeg er svensker, og prøver at svare med sit noget vingeskudte k
     path: 'jitterframe.json'
   });
 
-  // Knappekontroller
+  // Knapper
+
+  // play
   document.getElementById('play-btn').addEventListener('click', () => {
     animation.play();
   });
 
+  // pause
   document.getElementById('pause-btn').addEventListener('click', () => {
     animation.pause();
   });
 
+  // stop
   document.getElementById('stop-btn').addEventListener('click', () => {
     animation.stop();
   });
 </script>
 ~~~~
+
+Læg mærke til at knapperne adresserer animationen ved hjælp af dens navn. I dette tilfælde er det:
+
+`animation`
+
+Hvis du har flere animationer, så giv dem forskellige navne. På den måde kan du lave knapper til de forskellige fisk og sætstykker. 
