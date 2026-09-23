@@ -14,19 +14,30 @@
 </head>
 <body>
     <h1>Jitter animation</h1>
-    
-    <p>Eksemplet viser, hvordan du kan starte og stoppe en Lottie fra Jitter.</p>
-    <p>I designfaget vil du lære, hvordan man tegner i vektorprogrammer, som Figma og Jitter. Filen skal ekporteres til JSON - og så kan du bruge den sammen med JavaScript</p>
 
     <!-- Her kommer containeren med animationen -->
     <figure id="jitter-container"></figure>
 
-    <!-- Knapper -->
+    <!-- Knapper: styrer animationen -->
     <button id="play-btn">Spil</button>
     <button id="pause-btn">Pause</button>
     <button id="stop-btn">Stop</button>
 
+    <!-- Lyd -->
+    
+        <button id="startLyd">Larm</button>
+
+        <audio id="baggrundslyd" loop>
+            <source src="lyd/slideTelecaster.mp3" type="audio/mpeg">
+        </audio>
+
+
     <!-- Load dit Script nederst på siden - så er alle elementer indlæst -->
+
+    <!-- Lottie: script -->
     <script src="js/jitterAnimation.js"></script>
+    
+    <!-- Lyd: sript -->
+    <script src="js/slideTelecaster.js"></script>
 </body>
 </html>
